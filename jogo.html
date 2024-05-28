@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendedor de Limonadas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn.icon-icons.com/icons2/2595/PNG/512/food_fruit_limon_icon_154562.png" type="image/png">
+</head>
+<body>
+    <!-- Para o uso da exemplificação em JS -->
+    <!-- <p id="p">contador</p>
+    <button onclick="a()">console</button> -->
+    
+    <audio src="https://alwayskind.org/wp-content/uploads/2021/10/Turn-It-Up-DJ-Meta.mp4" id="sound"></audio>
+    <audio src="audio.mp3" id="soundBtn"></audio>
+
+    <header>
+        <h1>Vendedor de Limonadas</h1>
+    </header>
+
+    <div class="image">
+        <img src="image.png" id="img" onclick="venda()">
+    </div>
+
+    <footer>
+        <h2 id="money">Dinheiro: 0</h2>
+        
+        <div class="marketing">
+            <h2>marketing</h2>
+            <div class="info">
+                <button onclick="updMarketing()" id="btnMark">Upgrade (300)</button>
+                <h3 id="vMark">Vendas(2seg): 1</h3>
+            </div>
+        </div>
+
+        <div class="melhorias">
+            <h2>melhorias</h2>
+            <div class="info">
+                <button onclick="updMelhorias()" id="btnMelh">Upgrade (300)</button>
+                <h3 id="vMelh">Preço: 2</h3>
+            </div>
+        </div>
+        <p>OBS: Clique na imagem para fazer mais uma venda</p>
+    </footer>
+
+
+    
+
+</body>
+
+
+<script>
+    // FUNCIONAMENTO BASE DO CÓDIGO
+    // var valor = 0;
+    // var p = document.getElementById("p")
+    
+    // setInterval( ()=>{
+    //     valor+=1;
+    //     console.log(valor);
+    //     p.innerHTML=valor
+    // },2000);
+
+    // function a(){
+    //     console.log("hello world")
+    // }
+</script>
+
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="https://cdn.icon-icons.com/icons2/2595/PNG/512/food_fruit_limon_icon_154562.png" type="image/png">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        html{
+            overflow: hidden;
+        }
+
+        body{
+            overflow: hidden;
+            position: absolute;
+        }
+
+        h1{
+            color: green;
+        }
+
+        .section{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            text-align: center;
+        }
+
+        .section input{
+            width: 80%;
+            font-size: 12pt;
+            margin: 10px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            outline: none;
+            border: 2px solid green;
+            color: green;
+        }
+
+        .section input::placeholder{
+            color: rgb(138, 187, 4);
+        }
+
+        .section button{
+            font-size: 12pt;
+            padding: 5px 20px;
+            border-radius: 20px;
+            border: 0px;
+            background-image: linear-gradient(90deg, rgb(138, 187, 4), green);
+            color: white;
+        }
+
+        h1{
+            font-size: 21pt;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <h1>Vendedor de Limonadas</h1>
+        <input type="text" placeholder="Seu nome" id="inp">
+        <button onclick="createAcount()">Começar a Jogar</button>
+    </div >
+
+</body>
+
+<script>
+
+
+class Person{
+    constructor(name){
+        this.name = name;
+        this.money = 0;
+        this.stMarketing = 1;
+        this.price = 2;
+        this.priceST = 1;
+        this.vendas = 1;
+    }
+
+    // update(money, stMarketing, price){
+    //     this.money = money;
+    //     this.stMarketing = stMarketing;
+    //     this.price = price;
+    // }
+}
+
+function createAcount(){
+    const inp = document.getElementById("inp").value;
+
+    const person = new Person(inp);
+
+    // sessionStorage.setItem('person', JSON.stringify(person));
+    localStorage.setItem('person', JSON.stringify(person));
+
+    // Redirecionar para a próxima página
+    window.location.href = 'jogo.html';
+}
+
+// const personData = sessionStorage.getItem('person');
+const personData = localStorage.getItem('person');    
+
+    if (personData) {
+        window.location = "jogo.html"
+    } 
+
+</script>
+
+</html>
